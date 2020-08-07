@@ -1,0 +1,17 @@
+  1 FROM golang:1.13.4
+  2 MAINTAINER xiaoqbzx@gmail.com
+  3 
+  4 WORKDIR /go/src/around
+  5 ADD . /go/src/around
+  6 
+  7 RUN go get cloud.google.com/go/storage
+  8 RUN go get cloud.google.com/go/vision/apiv1.
+  9 RUN go get github.com/auth0/go-jwt-middleware
+ 10 RUN go get github.com/dgrijalva/jwt-go
+ 11 RUN go get github.com/gorilla/mux
+ 12 RUN go get github.com/pborman/uuid
+ 13 RUN go get github.com/olivere/elastic
+ 14 
+ 15 EXPOSE 8080
+ 16 CMD ["/usr/local/go/bin/go", "run", "main.go", "user.go", "vision.go"]
+ 17 

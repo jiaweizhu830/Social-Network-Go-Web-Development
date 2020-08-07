@@ -1,0 +1,12 @@
+.overlay {
+    backgroud-color: rgba(0, 0, 0, 0.8);
+    max-height: 40px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 2px;
+    fond-size: 90%;
+}
+
